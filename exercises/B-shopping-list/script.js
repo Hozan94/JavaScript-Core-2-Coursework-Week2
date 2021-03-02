@@ -3,9 +3,9 @@ function shoppingList(arrayOfItems) {
   let ourList = document.createElement("ul");
 
   for (let item of arrayOfItems) {
-    let eachList = document.createElement("li");
-    eachList.innerText = item;
-    ourList.appendChild(eachList);
+    let eachItem = document.createElement("li");
+    eachItem.innerText = item;
+    ourList.appendChild(eachItem);
   }
   contents.appendChild(ourList);
 

@@ -11,10 +11,8 @@ function listOfColours(colours) {
   }
 
   dropMenu.addEventListener("change", addColour);
-
+  
   function addColour(e) {
-    console.log("calling addColour");
-    console.log(e);
     paragraph.style.backgroundColor = e.target.value;
     paragraph.innerText = `You have selected: ${e.target.value}`;
   }

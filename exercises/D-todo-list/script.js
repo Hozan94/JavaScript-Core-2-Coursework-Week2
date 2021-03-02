@@ -8,24 +8,23 @@ function todoList(todos) {
   let toDoList = document.createElement("ul");                                  //Create the "ul" tag
 
   for (let action of todos) {                                                   //Iterate through the list
-    let eachList = document.createElement("li")                                 //In each iteration create a list "li", then write a text inside and style the text
-    eachList.innerText = action.todo;
-    eachList.style.fontSize = "30px"
-
-    eachList.addEventListener("click", addLineThrough)                          //Add an event listener and its callback function.
-
-    function addLineThrough() {
-      if (eachList.style.textDecoration !== "line-through") {
-        eachList.style.textDecoration = "line-through";
-      } else {
-        eachList.style.textDecoration = "none";
-      }
-    }
-
-    toDoList.appendChild(eachList);                                             //Append each new list "li" to our "ul" at the top
+    let eachItem = document.createElement("li")                                 //In each iteration create a list "li", then write a text inside and style the text
+    eachItem.innerText = action.todo;
+    eachItem.classList.add("my-item")
+    eachItem.addEventListener("click", addLineThrough)                          //Add an event listener and its callback function.
+    
+    toDoList.appendChild(eachItem);                                             //Append each new list "li" to our "ul" at the top
   }
 
   contents.appendChild(toDoList);                                              //Append the unordered list "ul" to the <div> with Id = #content
+}
+
+function addLineThrough(e) {
+  if (e.target.style.textDecoration !== "line-through") {
+    e.target.classList.toggle("add-line-through");
+  } else {
+    e.target.classList.toggle("my-item");
+  }
 }
 
 const ourTodos = [

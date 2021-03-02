@@ -157,3 +157,23 @@ body {
     max-height: 80px;
   }
 }
+
+/* Adding style to the classes created with DOM */
+
+.book-is-read {
+  background-color: green;
+}
+
+.book-not-read {
+  background-color: red;
+}
+
+.my-list {
+  text-align: center;
+  list-style: none;
+}
+
+.book-image {
+  width: 200px;
+  height: 300px;
+}

@@ -157,3 +157,15 @@ body {
     max-height: 80px;
   }
 }
+
+/* Adding style to classes created with DOM */
+
+.my-item {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.add-line-through {
+  font-size: 30px;
+  text-decoration: line-through;
+}
